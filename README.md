@@ -2,7 +2,10 @@
 # Códigos del tutorial de Wordpress
 Producción II
 
-## Suplanta las palabras en mayusculas con tu info
+ - [Da click aquí para ver el video
+   tutorial](https://web.microsoftstream.com/video/d8489782-d8a5-4d8a-a811-9da4ac624531)
+
+## Suplanta las palabras en mayúsculas con tu info
 
 **Este es para obtener las listas de ubicaciones de servidores que tiene Azure**
 
@@ -85,7 +88,8 @@ P -> PHP: El lenguaje de programación que usa y en el que está constuido Wordp
     sudo sh -c 'echo "<?php phpinfo(); ?>" > /var/www/html/info.php'
 
 **Para probar si todo esta bien y visualizar el archivo inho.php que está en tu maquina virtual**
-http://TU_DIRECCION_IP/info.php
+
+ - http://TU_DIRECCION_IP/info.php
 
 **Instalar Wordpress**
 
@@ -96,7 +100,7 @@ http://TU_DIRECCION_IP/info.php
     sudo sensible-editor wordpress.sql
 
 **Creas una base de datos y le das permisos**
-**Solo cambia la contraseña, lo demás dejalo igual**
+**Solo cambia la contraseña, lo demás déjalo igual**
 
     CREATE DATABASE wordpress;
     GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER
@@ -117,7 +121,7 @@ http://TU_DIRECCION_IP/info.php
     sudo sensible-editor /etc/wordpress/config-localhost.php
 
 **Para darle permisos a Wordpress de Acceder a la base de datos**
-**Solo cambia la contraseña, lo demás dejalo igual**
+**Solo cambia la contraseña, lo demás déjalo igual**
 
     <?php
     define('DB_NAME', 'wordpress');
@@ -127,16 +131,17 @@ http://TU_DIRECCION_IP/info.php
     define('WP_CONTENT_DIR', '/usr/share/wordpress/wp-content');
     ?>
 
-**Es para hacer un enlace sibolico y que la página "esté" también en el puerto 80 que es donde se ve las páginas**
+**Es para hacer un enlace simbólico y que la página "esté" también en el puerto 80 que es donde se ve las páginas**
 
     sudo ln -s /usr/share/wordpress /var/www/html/wordpress
 
-**Para enviar toda la configuración de Wordpress al lugar que le corresponde y peuda funcionar la página**
+**Para enviar toda la configuración de Wordpress al lugar que le corresponde y pueda funcionar la página**
 
     sudo mv /etc/wordpress/config-localhost.php /etc/wordpress/config-default.php
 
-**Conprueba que tu página de Wordpress funciona**
-http://TU_DIRECCION_IP/wordpress
+**Comprueba que tu página de Wordpress funciona**
+
+ 1. http://TU_DIRECCION_IP/wordpress
 
 **Ir a la carpeta de Wordpress**
 
@@ -150,8 +155,9 @@ http://TU_DIRECCION_IP/wordpress
 
     sudo su
 
-**De aquí en adelante tienes que ir a GitHub, hacer un repositorio vacio y seguir los pasoa que ahí te dan**
-https://github.com
+**De aquí en adelante tienes que ir a GitHub, hacer un repositorio vacío y seguir los pasos que ahí te dan**
+
+ - https://github.com
 
 **IMPORTANTE**
 Agrega: 
@@ -165,32 +171,5 @@ git commit -m "Initial commit"
 
 Si tienes problemas, este es el link para reportar errores de azure. 
 No aplican errores por mal uso de la plataforma o errores humanos
-https://azure.microsoft.com/en-us/support/create-ticket/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ - https://azure.microsoft.com/en-us/support/create-ticket/
